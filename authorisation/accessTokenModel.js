@@ -28,7 +28,7 @@ module.exports =  (injectedUserDBHelper, injectedAccessTokensDBHelper) => {
 includes the grants field. Note that we did, however, specify that we're using the password grantType when we made the
 oAuth object in the index.js file.
 
-The callback takes 2 parameters. The first parameter is an error of type falsey and the second is a client object.
+The callback takes 2 parameters. The first parameter is an error of type false and the second is a client object.
 As we're not of retrieving the client using the clientID and clientSecret (as we're using the password grantType)
 we can just create an empty client with all null values.Because the client is a hardcoded object
  - as opposed to a client we've retrieved through another operation - we just pass false for the error parameter
@@ -67,7 +67,7 @@ function getUser(username, password, callback){
   console.log('getUser() called and username is: ', username, ' and password is: ', password, ' and callback is: ', callback, ' and is userDBHelper null is: ', userDBHelper);
 
   //try and get the user using the user's credentials
-  userDBHelper.getUserFromCrentials(username, password, callback)
+  userDBHelper.getUserFromCredentials(username, password, callback)
 }
 
 /* saves the accessToken along with the userID retrieved the specified user */

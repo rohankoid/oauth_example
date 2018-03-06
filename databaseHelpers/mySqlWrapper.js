@@ -19,7 +19,7 @@ function initConnection() {
 
     host: 'localhost',
     user: 'root',
-    password: 'databasePassword',
+    password: '',
     database: 'oAuth2Test'
   })
 }
